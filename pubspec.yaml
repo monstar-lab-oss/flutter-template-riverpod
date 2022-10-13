@@ -1,0 +1,59 @@
+name: flutter_template_riverpod
+description: MonstarLab Flutter Template w/Riverpod
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.18.2 <3.3.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  # Superior state management
+  flutter_riverpod: ^2.0.2
+  # Handle the complexity of asynchronous networking calls to REST APIs
+  retrofit: ^3.3.1
+  #Declarative Routing Package
+  go_router: ^5.0.5
+  # Code generation for immutable classes
+  freezed: ^2.1.1
+  freezed_annotation: ^2.1.0
+  # Generate code for converting to and from JSON via annotation
+  json_serializable: ^6.5.1
+  json_annotation: ^4.7.0
+  # Shared Preferences
+  shared_preferences: ^2.0.15
+  # Log network calls in a pretty, easy to read format
+  pretty_dio_logger: ^1.1.1
+  # Logger that prints beautiful logs
+  logger: ^1.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  # Official linter
+  flutter_lints: ^2.0.1
+  # Essential for file generation at build time
+  build_runner: ^2.3.0
+  # Safely use assets, fonts etc without string paths
+  flutter_gen_runner: ^5.0.1
+
+flutter:
+  uses-material-design: true
+  # Enable generation of localized Strings from arb files.
+  generate: true
+
+  assets:
+    # Add assets from the images directory to the application.
+    - assets/images/
+    - assets/icons/
+
+flutter_intl:
+  enabled: true
+
+flutter_gen:
+  output: lib/generated
