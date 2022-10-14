@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template_riverpod/common_widgets/base/base_page.dart';
-import 'package:flutter_template_riverpod/pages/home/widgets/home_app_bar.dart';
+import 'package:flutter_template_riverpod/presentation/feature/home/widgets/home_app_bar.dart';
 
+import '../../common_widgets/base/base_page.dart';
 import '../news/news_page.dart';
 import '../profile/profile_page.dart';
 

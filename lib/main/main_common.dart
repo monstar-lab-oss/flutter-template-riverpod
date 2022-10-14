@@ -3,8 +3,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../app.dart';
 import '../data/providers/app_flavor_provider.dart';
+import '../presentation/app.dart';
 import 'app_flavor.dart';
 
 void mainCommon(AppFlavor appFlavor) {

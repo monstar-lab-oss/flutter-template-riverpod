@@ -1,8 +1,7 @@
 import 'dart:io' show Platform;
 
 import 'package:flutter/material.dart';
-
-import '../../constants/resources/resources.dart';
+import 'package:flutter_template_riverpod/constants/resources/colors.dart';
 
 mixin BasePageMixin {
   bool get resizeToAvoidBottomInset => false;

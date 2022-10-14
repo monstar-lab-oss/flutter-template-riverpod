@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_template_riverpod/common_widgets/base/base_page.dart';
 
+import '../../common_widgets/base/base_page.dart';
 import '../home/widgets/home_app_bar.dart';
 
 class NewsPage extends BasePage {

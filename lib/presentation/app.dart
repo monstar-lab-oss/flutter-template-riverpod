@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_template_riverpod/pages/home/home_page.dart';
 
-import 'constants/resources/themes.dart';
-import 'main/app_flavor.dart';
+import '../constants/resources/themes.dart';
+import '../main/app_flavor.dart';
+import 'feature/home/home_page.dart';
 
 class App extends ConsumerStatefulWidget {
   const App({
