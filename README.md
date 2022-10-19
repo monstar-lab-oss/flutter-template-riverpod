@@ -16,8 +16,41 @@ For help getting started with Flutter development, view the
 mobile development, and a full API reference.
 
 ## How to run
-
+- run below command
 ```
 flutter pub get
 flutter packages pub run build_runner build --delete-conflicting-outputs
+```
+
+### Visual Studio
+- create launch.json and add add below
+```
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "flutter_template_riverpod",
+            "request": "launch",
+            "type": 
+            "dart",
+            "program": "lib/main/main_development.dart"
+        },
+        {
+            "name": "flutter_template_riverpod (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile",
+            "program": "lib/main/main_production.dart"
+        },
+        {
+            "name": "flutter_template_riverpod (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release",
+            "program": "lib/main/main_production.dart"
+        }
+    ]
 ```
