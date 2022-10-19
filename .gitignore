@@ -53,6 +53,7 @@ analysis_benchmark.json
 .packages
 .pub-cache/
 .pub/
+.fvm/
 build/
 flutter_*.png
 linked_*.ds

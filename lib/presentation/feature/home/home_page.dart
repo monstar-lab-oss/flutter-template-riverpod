@@ -31,9 +31,6 @@ class _HomePageState extends BasePageState<HomePage>
   @override
   Widget buildBody(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Bottom Navigation Bar"),
-      ),
       body: _screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,

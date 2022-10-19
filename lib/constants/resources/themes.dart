@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template_riverpod/constants/resources/text_styles.dart';
 
 import 'colors.dart';
 import 'resources.dart';

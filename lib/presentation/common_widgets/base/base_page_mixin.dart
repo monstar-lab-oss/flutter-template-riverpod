@@ -8,8 +8,6 @@ mixin BasePageMixin {
 
   bool get tapOutsideHideKeyboard => false;
 
-  bool get isTrainingMode => false;
-
   Color? get backgroundColor => null;
 
   Future<bool> onWillPop() async => true;
