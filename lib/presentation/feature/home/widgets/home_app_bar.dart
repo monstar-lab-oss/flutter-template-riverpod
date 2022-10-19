@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template_riverpod/constants/resources/colors.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../common_widgets/space_box.dart';
 
 const double leadingWidth = 100;
 
-class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
+class HomeAppBar extends ConsumerWidget implements PreferredSizeWidget {
   const HomeAppBar({
     Key? key,
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return AppBar(
-      backgroundColor: context.colors.white,
+      backgroundColor: Colors.lightBlue,
       toolbarHeight: kToolbarHeight,
       elevation: 0,
       leadingWidth: leadingWidth,
@@ -38,7 +38,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   Widget buildTitle(BuildContext context) {
-    return const SpaceBox();
+    return const Text("Flutter Template");
   }
 
   List<Widget>? buildActions(BuildContext context) {

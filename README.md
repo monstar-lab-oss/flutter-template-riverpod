@@ -16,6 +16,7 @@ For help getting started with Flutter development, view the
 mobile development, and a full API reference.
 
 ## How to run
+
 ```
 flutter pub get
 flutter packages pub run build_runner build --delete-conflicting-outputs
