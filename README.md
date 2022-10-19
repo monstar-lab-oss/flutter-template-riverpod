@@ -22,6 +22,7 @@ flutter pub get
 flutter packages pub run build_runner build --delete-conflicting-outputs
 ```
 
+### Visual Studio
 - create launch.json and add add below
 ```
 {
