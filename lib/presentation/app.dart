@@ -14,7 +14,7 @@ class App extends ConsumerStatefulWidget {
   final AppFlavor appFlavor;
 
   @override
-  _AppState createState() => _AppState();
+  ConsumerState<App> createState() => _AppState();
 }
 
 class _AppState extends ConsumerState<App> {
@@ -28,12 +28,13 @@ class _AppState extends ConsumerState<App> {
     return Builder(
       builder: (context) {
         return MaterialApp(
-            // debugShowCheckedModeBanner: false,
-            theme: Themes.appTheme(),
-            // localizationsDelegates: AppLocalizations.localizationsDelegates,
-            // supportedLocales: AppLocalizations.supportedLocales,
-            title: 'MonstarLab Riverpod Template',
-            home: _buildContent());
+          // debugShowCheckedModeBanner: false,
+          theme: Themes.appTheme(),
+          // localizationsDelegates: AppLocalizations.localizationsDelegates,
+          // supportedLocales: AppLocalizations.supportedLocales,
+          title: 'MonstarLab Riverpod Template',
+          home: _buildContent(),
+        );
       },
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template_riverpod/constants/constants.dart';
+
+import '../constants.dart';
 
 enum FontSizes {
   fontSize9,

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template_riverpod/presentation/feature/home/widgets/home_app_bar.dart';
 
 import '../../common_widgets/base/base_page.dart';
 import '../news/news_page.dart';
 import '../profile/profile_page.dart';
+import 'widgets/home_app_bar.dart';
 
 class HomePage extends BasePage {
   const HomePage({Key? key}) : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  BasePageState<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends BasePageState<HomePage>
@@ -42,11 +42,11 @@ class _HomePageState extends BasePageState<HomePage>
         iconSize: 30,
         items: const [
           BottomNavigationBarItem(
-            label: "News",
+            label: 'News',
             icon: Icon(Icons.newspaper),
           ),
           BottomNavigationBarItem(
-            label: "Profile",
+            label: 'Profile',
             icon: Icon(Icons.person),
           ),
         ],
