@@ -1,7 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'get_top_anime_request.freezed.dart';
-
 part 'get_top_anime_request.g.dart';
 
 @freezed

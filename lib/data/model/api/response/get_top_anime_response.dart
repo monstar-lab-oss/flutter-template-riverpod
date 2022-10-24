@@ -1,7 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'get_top_anime_response.freezed.dart';
-
 part 'get_top_anime_response.g.dart';
 
 // Produced using Freezed Model Generator : https://marketplace.visualstudio.com/items?itemName=SushanShakya.freezed-model-gen
@@ -10,7 +9,7 @@ part 'get_top_anime_response.g.dart';
 class GetTopAnimeResponse with _$GetTopAnimeResponse {
   const factory GetTopAnimeResponse({
     Pagination? pagination,
-    List<Data>? data,
+    List<GetTopAnimeResponseData>? data,
     Links? links,
     Meta? meta,
   }) = _GetTopAnimeResponse;
@@ -44,9 +43,9 @@ class Items with _$Items {
 }
 
 @freezed
-class Data with _$Data {
-  const factory Data({
-    int? mal_id,
+class GetTopAnimeResponseData with _$GetTopAnimeResponseData {
+  const factory GetTopAnimeResponseData({
+    required int mal_id,
     String? url,
     Images? images,
     Trailer? trailer,
@@ -82,9 +81,10 @@ class Data with _$Data {
     List<dynamic>? explicit_genres,
     List<Themes>? themes,
     List<Demographics>? demographics,
-  }) = _Data;
+  }) = _GetTopAnimeResponseData;
 
-  factory Data.fromJson(Map<String, dynamic> json) => _$DataFromJson(json);
+  factory GetTopAnimeResponseData.fromJson(Map<String, dynamic> json) =>
+      _$GetTopAnimeResponseDataFromJson(json);
 }
 
 @freezed

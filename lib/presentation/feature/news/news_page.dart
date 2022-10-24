@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_template_riverpod/data/model/api/request/get_top_anime_request.dart';
 import 'package:flutter_template_riverpod/data/repository/my_anime_list_repository.dart';
 import 'package:flutter_template_riverpod/presentation/feature/news/models/anime_news_item_model.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
@@ -11,11 +12,26 @@ MyAnimeListRepository myAnimeListRepository(MyAnimeListRepositoryRef ref) =>
     MyAnimeListRepository();
 
 @riverpod
-List<AnimeNewsItemModel> topAnime(TopAnimeRef ref) {
-  return [
-    const AnimeNewsItemModel(id: 1, name: "Anime1", imageUrl: "anime1.jpg"),
-    const AnimeNewsItemModel(id: 2, name: "Anime2", imageUrl: "anime2.jpg"),
-  ];
+Future<List<AnimeNewsItemModel>> topAnime(
+  TopAnimeRef ref, {
+  required GetTopAnimeRequest getTopAnimeRequest,
+}) async {
+  final myAnimeListRepository = ref.watch(myAnimeListRepositoryProvider);
+  final result = await myAnimeListRepository.getTopAnime(
+    ref: ref,
+    getTopAnimeRequest: getTopAnimeRequest,
+  );
+  if (result.data != null) {
+    return result.data!
+        .map(
+          (animeResponse) => AnimeNewsItemModel.fromGetTopAnimeResponse(
+            responseData: animeResponse,
+          ),
+        )
+        .toList();
+  } else {
+    return [];
+  }
 }
 
 class NewsPage extends ConsumerWidget {
@@ -23,15 +39,26 @@ class NewsPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    // final topAnime = ref.watch(myAnimeListRepositoryProvider);
+    final topAnime = ref.watch(
+      topAnimeProvider(
+        getTopAnimeRequest: const GetTopAnimeRequest(
+            type: 'tv', filter: 'airing', limit: 10, page: 1),
+      ),
+    );
     return Column(
       children: [
         Expanded(
-          child: ListView(
-            children: [
-              for (final anime in ref.watch(topAnimeProvider))
-                TopAnimeItemWidget(animeNewsItemModel: anime)
-            ],
+          child: topAnime.when(
+            error: (err, stack) => Text('Err $err'),
+            loading: () => const CircularProgressIndicator(),
+            data: (topAnime) {
+              return ListView(
+                children: [
+                  for (final anime in topAnime)
+                    TopAnimeItemWidget(animeNewsItemModel: anime)
+                ],
+              );
+            },
           ),
         ),
       ],
