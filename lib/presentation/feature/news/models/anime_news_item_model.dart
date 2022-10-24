@@ -7,17 +7,20 @@ part 'anime_news_item_model.freezed.dart';
 class AnimeNewsItemModel with _$AnimeNewsItemModel {
   const factory AnimeNewsItemModel({
     required int id,
-    required String name,
+    required String titleEn,
+    required String titleJp,
     required String imageUrl,
   }) = _AnimeNewsItemModel;
 
   factory AnimeNewsItemModel.fromGetTopAnimeResponse({
     required GetTopAnimeResponseData responseData,
   }) {
-    String? firstImage = responseData.images?.jpg?.image_url;
+    var firstImage = responseData.images?.jpg?.image_url;
     return AnimeNewsItemModel(
-        id: responseData.mal_id,
-        name: responseData.title_english ?? '',
-        imageUrl: firstImage ?? '');
+      id: responseData.mal_id,
+      titleEn: responseData.title_english ?? '',
+      titleJp: responseData.title_japanese ?? '',
+      imageUrl: firstImage ?? '',
+    );
   }
 }
