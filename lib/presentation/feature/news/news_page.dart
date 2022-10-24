@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../data/model/api/request/get_top_anime_request.dart';
-import '../../../data/providers/my_anime_list_repository_provider.dart';
+import '../../../data/use_case/anime/get_top_anime.dart';
 import 'widgets/top_anime_item_widget.dart';
 
 class NewsPage extends ConsumerWidget {
