@@ -16,7 +16,9 @@ Future<List<AnimeNewsItemModel>> topAnime(
     ref: ref,
     getTopAnimeRequest: getTopAnimeRequest,
   );
-  if (result.data != null) {
+  if (result.data == null) {
+    return [];
+  } else {
     return result.data!
         .map(
           (animeResponse) => AnimeNewsItemModel.fromGetTopAnimeResponse(
@@ -24,7 +26,5 @@ Future<List<AnimeNewsItemModel>> topAnime(
           ),
         )
         .toList();
-  } else {
-    return [];
   }
 }

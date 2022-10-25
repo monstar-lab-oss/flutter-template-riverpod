@@ -41,10 +41,6 @@ class NewsPage extends ConsumerWidget {
                 ],
               ),
             );
-            // return ListView(
-            //   children: [
-            //    ,
-            // );
           },
         ),
       ],

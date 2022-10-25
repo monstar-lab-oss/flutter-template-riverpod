@@ -43,7 +43,7 @@ dev_dependencies:
   # Essential for file generation at build time
   build_runner: ^2.3.2
   # Safely use assets, fonts etc without string paths
-  flutter_gen_runner: ^5.0.2
+  flutter_gen_runner: ^5.0.3
   # Generate interface to APIs
   retrofit_generator: '>=4.0.0 <5.0.0'
   # Generate providers for Riverpod
