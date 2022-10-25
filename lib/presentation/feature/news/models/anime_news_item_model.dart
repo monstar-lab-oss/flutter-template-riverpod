@@ -1,5 +1,6 @@
-import 'package:flutter_template_riverpod/data/model/api/response/get_top_anime_response.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+
+import '../../../../data/model/api/response/get_top_anime_response.dart';
 
 part 'anime_news_item_model.freezed.dart';
 
@@ -15,11 +16,11 @@ class AnimeNewsItemModel with _$AnimeNewsItemModel {
   factory AnimeNewsItemModel.fromGetTopAnimeResponse({
     required GetTopAnimeResponseData responseData,
   }) {
-    var firstImage = responseData.images?.jpg?.image_url;
+    final firstImage = responseData.images?.jpg?.imageUrl;
     return AnimeNewsItemModel(
-      id: responseData.mal_id,
-      titleEn: responseData.title_english ?? '',
-      titleJp: responseData.title_japanese ?? '',
+      id: responseData.malId,
+      titleEn: responseData.titleEnglish ?? '',
+      titleJp: responseData.titleJapanese ?? '',
       imageUrl: firstImage ?? '',
     );
   }

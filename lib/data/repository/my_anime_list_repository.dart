@@ -10,9 +10,10 @@ class MyAnimeListRepository {
     required GetTopAnimeRequest getTopAnimeRequest,
   }) async {
     return ref.read(apiClientProvider).getTopAnime(
-        type: getTopAnimeRequest.type,
-        page: getTopAnimeRequest.page,
-        limit: getTopAnimeRequest.limit,
-        filter: getTopAnimeRequest.filter);
+          type: getTopAnimeRequest.type,
+          page: getTopAnimeRequest.page,
+          limit: getTopAnimeRequest.limit,
+          filter: getTopAnimeRequest.filter,
+        );
   }
 }

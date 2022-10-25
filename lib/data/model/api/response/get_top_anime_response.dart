@@ -21,9 +21,9 @@ class GetTopAnimeResponse with _$GetTopAnimeResponse {
 @freezed
 class Pagination with _$Pagination {
   const factory Pagination({
-    int? last_visible_page,
-    bool? has_next_page,
-    int? current_page,
+    @JsonKey(name: 'last_visible_page') int? lastVisiblePage,
+    @JsonKey(name: 'has_next_page') bool? hasNextPage,
+    @JsonKey(name: 'current_page') int? currentPage,
     Items? items,
   }) = _Pagination;
 
@@ -36,7 +36,7 @@ class Items with _$Items {
   const factory Items({
     int? count,
     int? total,
-    int? per_page,
+    @JsonKey(name: 'per_page') int? perPage,
   }) = _Items;
 
   factory Items.fromJson(Map<String, dynamic> json) => _$ItemsFromJson(json);
@@ -45,16 +45,16 @@ class Items with _$Items {
 @freezed
 class GetTopAnimeResponseData with _$GetTopAnimeResponseData {
   const factory GetTopAnimeResponseData({
-    required int mal_id,
+    @JsonKey(name: 'mal_id') required int malId,
     String? url,
     Images? images,
     Trailer? trailer,
     bool? approved,
     List<Titles>? titles,
     String? title,
-    String? title_english,
-    String? title_japanese,
-    List<String>? title_synonyms,
+    @JsonKey(name: 'title_english') String? titleEnglish,
+    @JsonKey(name: 'title_japanese') String? titleJapanese,
+    @JsonKey(name: 'title_synonyms') List<String>? titleSynonyms,
     String? type,
     String? source,
     int? episodes,
@@ -64,7 +64,7 @@ class GetTopAnimeResponseData with _$GetTopAnimeResponseData {
     String? duration,
     String? rating,
     double? score,
-    int? scored_by,
+    @JsonKey(name: 'scored_by') int? scoredBy,
     int? rank,
     int? popularity,
     int? members,
@@ -78,7 +78,7 @@ class GetTopAnimeResponseData with _$GetTopAnimeResponseData {
     List<Licensors>? licensors,
     List<Studios>? studios,
     List<Genres>? genres,
-    List<dynamic>? explicit_genres,
+    @JsonKey(name: 'explicit_genres') List<dynamic>? explicitGenres,
     List<Themes>? themes,
     List<Demographics>? demographics,
   }) = _GetTopAnimeResponseData;
@@ -100,9 +100,9 @@ class Images with _$Images {
 @freezed
 class Jpg with _$Jpg {
   const factory Jpg({
-    String? image_url,
-    String? small_image_url,
-    String? large_image_url,
+    @JsonKey(name: 'image_url') String? imageUrl,
+    @JsonKey(name: 'small_image_url') String? smallImageUrl,
+    @JsonKey(name: 'large_image_url') String? largeImageUrl,
   }) = _Jpg;
 
   factory Jpg.fromJson(Map<String, dynamic> json) => _$JpgFromJson(json);
@@ -111,9 +111,9 @@ class Jpg with _$Jpg {
 @freezed
 class Webp with _$Webp {
   const factory Webp({
-    String? image_url,
-    String? small_image_url,
-    String? large_image_url,
+    @JsonKey(name: 'image_url') String? imageUrl,
+    @JsonKey(name: 'small_image_url') String? smallImageUrl,
+    @JsonKey(name: 'large_image_url') String? largeImageUrl,
   }) = _Webp;
 
   factory Webp.fromJson(Map<String, dynamic> json) => _$WebpFromJson(json);
@@ -122,9 +122,9 @@ class Webp with _$Webp {
 @freezed
 class Trailer with _$Trailer {
   const factory Trailer({
-    String? youtube_id,
+    @JsonKey(name: 'youtube_id') String? youtubeId,
     String? url,
-    String? embed_url,
+    @JsonKey(name: 'embed_url') String? embedUrl,
     TrailerImages? images,
   }) = _Trailer;
 
@@ -135,11 +135,11 @@ class Trailer with _$Trailer {
 @freezed
 class TrailerImages with _$TrailerImages {
   const factory TrailerImages({
-    String? image_url,
-    String? small_image_url,
-    String? medium_image_url,
-    String? large_image_url,
-    String? maximum_image_url,
+    @JsonKey(name: 'image_url') String? imageUrl,
+    @JsonKey(name: 'small_image_url') String? smallImageUrl,
+    @JsonKey(name: 'medium_image_url') String? mediumImageUrl,
+    @JsonKey(name: 'large_image_url') String? largeImageUrl,
+    @JsonKey(name: 'maximum_image_url') String? maximumImageUrl,
   }) = _TrailerImages;
 
   factory TrailerImages.fromJson(Map<String, dynamic> json) =>
@@ -216,7 +216,7 @@ class Broadcast with _$Broadcast {
 @freezed
 class Producers with _$Producers {
   const factory Producers({
-    int? mal_id,
+    @JsonKey(name: 'mal_id') int? malId,
     String? type,
     String? name,
     String? url,
@@ -229,7 +229,7 @@ class Producers with _$Producers {
 @freezed
 class Licensors with _$Licensors {
   const factory Licensors({
-    int? mal_id,
+    @JsonKey(name: 'mal_id') int? malId,
     String? type,
     String? name,
     String? url,
@@ -242,7 +242,7 @@ class Licensors with _$Licensors {
 @freezed
 class Studios with _$Studios {
   const factory Studios({
-    int? mal_id,
+    @JsonKey(name: 'mal_id') int? malId,
     String? type,
     String? name,
     String? url,
@@ -255,7 +255,7 @@ class Studios with _$Studios {
 @freezed
 class Genres with _$Genres {
   const factory Genres({
-    int? mal_id,
+    @JsonKey(name: 'mal_id') int? malId,
     String? type,
     String? name,
     String? url,
@@ -267,7 +267,7 @@ class Genres with _$Genres {
 @freezed
 class Themes with _$Themes {
   const factory Themes({
-    int? mal_id,
+    @JsonKey(name: 'mal_id') int? malId,
     String? type,
     String? name,
     String? url,
@@ -279,7 +279,7 @@ class Themes with _$Themes {
 @freezed
 class Demographics with _$Demographics {
   const factory Demographics({
-    int? mal_id,
+    @JsonKey(name: 'mal_id') int? malId,
     String? type,
     String? name,
     String? url,
@@ -304,12 +304,12 @@ class Links with _$Links {
 @freezed
 class Meta with _$Meta {
   const factory Meta({
-    int? current_page,
+    @JsonKey(name: 'current_page') int? currentPage,
     int? from,
-    int? last_page,
+    @JsonKey(name: 'last_page') int? lastPage,
     List<MetaLinks>? links,
     String? path,
-    int? per_page,
+    @JsonKey(name: 'per_page') int? perPage,
     int? to,
     int? total,
   }) = _Meta;
