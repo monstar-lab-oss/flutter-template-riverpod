@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../../constants/resources/colors.dart';
+import '../../../../constants/resources/images.dart';
 import '../models/anime_news_item_model.dart';
 
 class TopAnimeItemWidget extends ConsumerWidget {
@@ -20,17 +22,17 @@ class TopAnimeItemWidget extends ConsumerWidget {
         ),
         clipBehavior: Clip.antiAlias,
         child: GridTileBar(
-          backgroundColor: Colors.black45,
+          backgroundColor: AppColors.light.mediumBlack,
           title: _GridTitleText(animeNewsItemModel.titleEn),
           subtitle: _GridTitleText(animeNewsItemModel.titleJp),
         ),
       ),
       child: Material(
-        color: Colors.black12,
+        color: AppColors.light.lightBlack,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
         clipBehavior: Clip.antiAlias,
         child: FadeInImage.assetNetwork(
-          placeholder: 'assets/images/loading.gif',
+          placeholder: AppImages.loading,
           image: animeNewsItemModel.imageUrl,
         ),
       ),
