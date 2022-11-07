@@ -138,6 +138,3 @@ linter:
     - use_if_null_to_convert_nulls_to_bools
     - use_rethrow_when_possible
     - valid_regexps
-
-# Additional information about this file can be found at
-# https://dart.dev/guides/language/analysis-options

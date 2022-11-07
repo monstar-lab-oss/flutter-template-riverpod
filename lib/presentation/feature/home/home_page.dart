@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../constants/resources/colors.dart';
 import '../../common_widgets/base/base_page.dart';
 import '../news/news_page.dart';
 import '../profile/profile_page.dart';
@@ -36,7 +37,7 @@ class _HomePageState extends BasePageState<HomePage>
         type: BottomNavigationBarType.fixed,
         currentIndex: _currentIndex,
         onTap: _updateIndex,
-        selectedItemColor: Colors.blue[700],
+        selectedItemColor: AppColors.light.mediumBlue,
         selectedFontSize: 13,
         unselectedFontSize: 13,
         iconSize: 30,

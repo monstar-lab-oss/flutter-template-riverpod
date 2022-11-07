@@ -1,5 +1,6 @@
 <component name="ProjectRunConfigurationManager">
-    <configuration default="false" name="development-debug" type="FlutterRunConfigurationType" factoryName="Flutter">
+    <configuration name="development-debug" default="false" factoryName="Flutter"
+        type="FlutterRunConfigurationType">
         <option name="additionalArgs" value="--debug" />
         <option name="buildFlavor" value="development" />
         <option name="filePath" value="$PROJECT_DIR$/lib/main/main_development.dart" />
