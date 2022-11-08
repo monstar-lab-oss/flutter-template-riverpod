@@ -5,24 +5,25 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "flutter_template_riverpod",
+      "name": "flutter_template_riverpod(development mode)",
       "request": "launch",
       "type": "dart",
-      "program": "lib/main/main_development.dart"
-    },
-    {
-      "name": "flutter_template_riverpod (profile mode)",
-      "request": "launch",
-      "type": "dart",
-      "flutterMode": "profile",
-      "program": "lib/main/main_production.dart"
+      "program": "lib/main/main_development.dart",
+      "args": [
+        "--flavor",
+        "Development",
+       ]
     },
     {
       "name": "flutter_template_riverpod (release mode)",
       "request": "launch",
       "type": "dart",
       "flutterMode": "release",
-      "program": "lib/main/main_production.dart"
+      "program": "lib/main/main_production.dart",
+      "args": [
+        "--flavor",
+        "Release",
+      ]
     }
   ]
 }
