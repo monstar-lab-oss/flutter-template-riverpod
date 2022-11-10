@@ -1,9 +1,23 @@
+### Issue
 
-**What**  
-- 
+- close `(required: Put the ticket link)`
 
-**Screen shots**  
-- NA
+### Motivation and Context
 
-**Api logs** 
-- NA 
+- `(required)`
+
+### Modified points
+
+- [ ] `(required: Write "What you did" here)`
+
+### Description and Screenshots
+
+- `(optional)`
+
+### Figma or screen image URL
+
+- `(required)`
+
+### Worries or Issues
+
+- `(optional)`
