@@ -24,7 +24,7 @@ flutter packages pub run build_runner build --delete-conflicting-outputs
 
 ## Run 
 ### Run iOS/Android using Visual Studio
-- create launch.json and add add below
+- create launch.json and add below
 ```
 {
   // Use IntelliSense to learn about possible attributes.
