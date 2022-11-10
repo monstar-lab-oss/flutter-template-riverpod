@@ -22,7 +22,7 @@
       "program": "lib/main/main_production.dart",
       "args": [
         "--flavor",
-        "Release",
+        "Production",
       ]
     }
   ]
