@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../constants/resources/colors.dart';
 import '../../common_widgets/base/base_page.dart';
-import '../news/news_page.dart';
+import '../news/top_anime_page.dart';
 import '../profile/profile_page.dart';
 import 'widgets/home_app_bar.dart';
 
@@ -16,7 +16,7 @@ class HomePage extends BasePage {
 class _HomePageState extends BasePageState<HomePage>
     with WidgetsBindingObserver {
   int _currentIndex = 0;
-  final List _screens = [const NewsPage(), const ProfilePage()];
+  final List _screens = [const TopAnimePage(), const ProfilePage()];
 
   void _updateIndex(int value) {
     setState(() {
@@ -43,7 +43,7 @@ class _HomePageState extends BasePageState<HomePage>
         iconSize: 30,
         items: const [
           BottomNavigationBarItem(
-            label: 'News',
+            label: 'Top Anime',
             icon: Icon(Icons.newspaper),
           ),
           BottomNavigationBarItem(

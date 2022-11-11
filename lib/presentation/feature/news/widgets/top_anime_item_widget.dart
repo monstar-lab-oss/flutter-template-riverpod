@@ -3,14 +3,14 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../constants/resources/colors.dart';
 import '../../../../constants/resources/images.dart';
-import '../models/anime_news_item_model.dart';
+import '../models/top_anime_item_model.dart';
 
 class TopAnimeItemWidget extends ConsumerWidget {
   const TopAnimeItemWidget({
     required this.animeNewsItemModel,
     Key? key,
   }) : super(key: key);
-  final AnimeNewsItemModel animeNewsItemModel;
+  final TopAnimeItemModel animeNewsItemModel;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

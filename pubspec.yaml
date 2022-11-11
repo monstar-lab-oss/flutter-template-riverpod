@@ -14,19 +14,19 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   # Superior state management
-  flutter_riverpod: ^2.0.2
-  riverpod_annotation: ^1.0.4
+  flutter_riverpod: ^2.1.1
+  riverpod_annotation: ^1.0.6
   # Handle the complexity of asynchronous networking calls to REST APIs
   retrofit: ^3.3.1
   # Most popular Http Client
   dio: ^4.0.6
   #Declarative Routing Package
-  go_router: ^5.1.1
+  go_router: ^5.1.5
   # Code generation for immutable classes
-  freezed: ^2.2.0
+  freezed: ^2.2.1
   freezed_annotation: ^2.2.0
   # Generate code for converting to and from JSON via annotation
-  json_serializable: ^6.5.3
+  json_serializable: ^6.5.4
   json_annotation: ^4.7.0
   # Shared Preferences
   shared_preferences: ^2.0.15
@@ -43,11 +43,11 @@ dev_dependencies:
   # Essential for file generation at build time
   build_runner: ^2.3.2
   # Safely use assets, fonts etc without string paths
-  flutter_gen_runner: ^5.0.3
+  flutter_gen_runner: ^5.1.0+1
   # Generate interface to APIs
   retrofit_generator: '>=4.0.0 <5.0.0'
   # Generate providers for Riverpod
-  riverpod_generator: ^1.0.4
+  riverpod_generator: ^1.0.6
 
 flutter:
   uses-material-design: true
