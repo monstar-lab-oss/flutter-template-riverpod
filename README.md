@@ -36,38 +36,7 @@ Launch Configurations are included in the `.run` folder.
 
 
 ### Run iOS/Android using Visual Studio
-- create launch.json and add below
-```
-{
-  // Use IntelliSense to learn about possible attributes.
-  // Hover to view descriptions of existing attributes.
-  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": "flutter_template_riverpod (development mode)",
-      "request": "launch",
-      "type": "dart",
-      "program": "lib/main/main_development.dart",
-      "args": [
-        "--flavor",
-        "Development",
-       ]
-    },
-    {
-      "name": "flutter_template_riverpod (release mode)",
-      "request": "launch",
-      "type": "dart",
-      "flutterMode": "release",
-      "program": "lib/main/main_production.dart",
-      "args": [
-        "--flavor",
-        "Release",
-      ]
-    }
-  ]
-}
-```
+- Follow .vscode/launch.json
 
 ### run iOS/Android From terminal
 ```
