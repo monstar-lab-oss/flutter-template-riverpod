@@ -21,7 +21,8 @@ GoRouter goRouter(ref) => GoRouter(
               path: RoutePaths.animeDetail,
               builder: (context, state) {
                 return DetailPage(
-                    id: int.parse(state.params[RouteParams.animeDetailId]!));
+                  id: int.parse(state.params[RouteParams.animeDetailId]!),
+                );
               },
             ),
           ],

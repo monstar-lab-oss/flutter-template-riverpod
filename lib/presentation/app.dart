@@ -4,7 +4,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../constants/resources/themes.dart';
 import '../data/providers/router_provider.dart';
 import '../main/app_flavor.dart';
-import 'feature/home/home_page.dart';
 
 class App extends ConsumerStatefulWidget {
   const App({
@@ -38,9 +37,5 @@ class _AppState extends ConsumerState<App> {
         );
       },
     );
-  }
-
-  Widget _buildContent() {
-    return const HomePage();
   }
 }
