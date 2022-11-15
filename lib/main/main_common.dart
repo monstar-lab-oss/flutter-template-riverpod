@@ -8,6 +8,7 @@ import '../presentation/app.dart';
 import 'app_flavor.dart';
 
 void mainCommon(AppFlavor appFlavor) {
+  debugPrint('Launching Mode : ${appFlavor.appFlavorType}.');
   WidgetsFlutterBinding.ensureInitialized();
   Future<void> startApp() async {
     runApp(

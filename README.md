@@ -19,19 +19,30 @@ it ideal for a demo/template.
 - Riverpod Provider Generation
 - Retrofit API calls, `toJson` function Generation.
 
-## How to run
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials, samples, guidance on
+mobile development, and a full API reference.
 
+## How to build
 - run below command
-
 ```
 flutter pub get
 flutter packages pub run build_runner build --delete-conflicting-outputs
 ```
 
-### Visual Studio
-
-Launch Configurations are included in the `.vscode/launch.json` file.
-
+## Run 
 ### Android Studio
-
 Launch Configurations are included in the `.run` folder. 
+
+
+### Run iOS/Android using Visual Studio
+- Follow .vscode/launch.json
+
+### run iOS/Android From terminal
+```
+- flutter run --flavor Development -t lib/main/main_development.dart
+```
+
+### run iOS using xcode
+- Select Development schema from top center and run in development mode(Debug)
+- Should select Production for archive release mode ipa file
