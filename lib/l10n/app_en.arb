@@ -1,0 +1,10 @@
+{
+  "home_tab_news": "News",
+  "@home_tab_news": {
+    "description": ""
+  },
+  "home_tab_profile": "Profile",
+  "@home_tab_profile": {
+    "description": ""
+  }
+}

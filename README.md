@@ -46,3 +46,8 @@ Launch Configurations are included in the `.run` folder.
 ### run iOS using xcode
 - Select Development schema from top center and run in development mode(Debug)
 - Should select Production for archive release mode ipa file
+
+### Localization
+- ref https://docs.flutter.dev/development/accessibility-and-localization/internationalization
+- define localization string file in app_en.arb, app_ja.arb it will be automatically generated to use.
+- use example - AppLocalizations.of(context)!.home_tab_profile

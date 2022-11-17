@@ -1,0 +1,10 @@
+{
+  "home_tab_news": "ニュース",
+  "@home_tab_news": {
+    "description": ""
+  },
+  "home_tab_profile": "プロフィール",
+  "@home_tab_profile": {
+    "description": ""
+  }
+}
