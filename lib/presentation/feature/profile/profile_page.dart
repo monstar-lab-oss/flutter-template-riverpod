@@ -1,10 +1,36 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class ProfilePage extends StatelessWidget {
-  const ProfilePage({Key? key}) : super(key: key);
+import '../../common/app_theme_provider.dart';
+
+class ProfilePage extends ConsumerWidget {
+  const ProfilePage({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return const Center(child: Text('Profile Page'));
+  Widget build(BuildContext context, WidgetRef ref) {
+    var isDarkTheme = ref.watch(appThemeNotifierProvider);
+    return Padding(
+      padding: const EdgeInsets.all(16),
+      child: Container(
+        color: Colors.greenAccent,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            const Text(
+              'Dark Mode',
+            ),
+            Switch(
+              value: isDarkTheme,
+              onChanged: (value) {
+                isDarkTheme = value;
+                ref
+                    .read(appThemeNotifierProvider.notifier)
+                    .setIsDarkTheme(value);
+              },
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
