@@ -8,7 +8,7 @@ class ProfilePage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    var isDarkTheme = ref.watch(appThemeNotifierProvider);
+    final isDarkTheme = ref.watch(appThemeNotifierProvider);
     return Padding(
       padding: const EdgeInsets.all(16),
       child: Container(
@@ -22,7 +22,6 @@ class ProfilePage extends ConsumerWidget {
             Switch(
               value: isDarkTheme,
               onChanged: (value) {
-                isDarkTheme = value;
                 ref
                     .read(appThemeNotifierProvider.notifier)
                     .setIsDarkTheme(value);
