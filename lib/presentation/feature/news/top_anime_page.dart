@@ -5,8 +5,8 @@ import '../../../data/model/api/request/get_top_anime_request.dart';
 import '../../../data/use_case/anime/get_top_anime.dart';
 import 'widgets/top_anime_item_widget.dart';
 
-class NewsPage extends ConsumerWidget {
-  const NewsPage({Key? key}) : super(key: key);
+class TopAnimePage extends ConsumerWidget {
+  const TopAnimePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -29,7 +29,7 @@ class NewsPage extends ConsumerWidget {
             return Expanded(
               child: GridView.count(
                 shrinkWrap: true,
-                restorationId: 'grid_view_news',
+                restorationId: 'grid_view_top_anime',
                 crossAxisCount: 2,
                 mainAxisSpacing: 8,
                 crossAxisSpacing: 8,
