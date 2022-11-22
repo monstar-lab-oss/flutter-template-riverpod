@@ -1,7 +1,7 @@
 class RoutePaths {
   RoutePaths._private();
 
-  static const home = '/';
+  static const root = '/';
 
   static const animeDetail = 'anime/:id';
 }

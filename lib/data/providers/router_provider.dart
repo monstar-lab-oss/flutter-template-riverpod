@@ -11,7 +11,7 @@ part 'router_provider.g.dart';
 GoRouter goRouter(ref) => GoRouter(
       routes: <GoRoute>[
         GoRoute(
-          path: RoutePaths.home,
+          path: RoutePaths.root,
           builder: (context, state) {
             return const HomePage();
           },
