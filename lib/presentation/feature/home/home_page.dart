@@ -44,8 +44,8 @@ class _HomePageState extends BasePageState<HomePage>
         iconSize: 30,
         items: [
           BottomNavigationBarItem(
-            label: 'Top Anime',
-            icon: Icon(Icons.newspaper),
+            label: AppLocalizations.of(context)!.home_tab_top_anime,
+            icon: const Icon(Icons.newspaper),
           ),
           BottomNavigationBarItem(
             label: AppLocalizations.of(context)!.home_tab_profile,
