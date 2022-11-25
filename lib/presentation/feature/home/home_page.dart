@@ -37,7 +37,7 @@ class _HomePageState extends BasePageState<HomePage>
         type: BottomNavigationBarType.fixed,
         currentIndex: _currentIndex,
         onTap: _updateIndex,
-        selectedItemColor: AppColors.light.mediumBlue,
+        selectedItemColor: context.colors.mediumBlue,
         selectedFontSize: 13,
         unselectedFontSize: 13,
         iconSize: 30,

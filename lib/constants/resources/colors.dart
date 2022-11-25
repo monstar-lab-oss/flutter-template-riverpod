@@ -61,6 +61,19 @@ class AppColors {
     lightBlue: Color(0x03A9F4FF),
     mediumBlue: Color(0xFF1976D2),
   );
+  static const dark = AppColors(
+    mainText: Color(0xFFF1F5F1),
+    subTextDark: Color(0xFF688690),
+    subTextLight: Color(0xFFB5C3C9),
+    border: Color(0xFFA7C0CC),
+    disable: Color(0xFFE7E9EB),
+    white: Color(0xFFFFFFFF),
+    black: Color(0xFF000000),
+    lightBlack: Color(0x1F000000),
+    mediumBlack: Color(0x73000000),
+    lightBlue: Color(0x03A9F4FF),
+    mediumBlue: Color(0xFF1976D2),
+  );
 }
 
 extension AppColorsExtension on BuildContext {

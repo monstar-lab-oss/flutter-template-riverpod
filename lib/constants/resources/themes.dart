@@ -3,15 +3,17 @@ import 'package:flutter/material.dart';
 import 'resources.dart';
 
 class Themes {
-  static ThemeData appTheme() {
+  static ThemeData appTheme(Brightness brightness) {
+    final colors =
+        brightness == Brightness.light ? AppColors.light : AppColors.dark;
     return ThemeData(
       appBarTheme: AppBarTheme(
         centerTitle: false,
-        color: AppColors.light.white,
+        color: colors.white,
         toolbarTextStyle: AppTextStyles.hiraginoSansRegular11
-            .copyWith(color: AppColors.light.mainText),
+            .copyWith(color: colors.mainText),
         titleTextStyle: AppTextStyles.hiraginoSansRegular12
-            .copyWith(color: AppColors.light.mainText),
+            .copyWith(color: colors.mainText),
       ),
     );
   }
