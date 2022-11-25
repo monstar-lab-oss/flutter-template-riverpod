@@ -3,8 +3,10 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../constants/resources/themes.dart';
+import '../data/providers/router_provider.dart';
 import '../main/app_flavor.dart';
-import 'feature/home/home_page.dart';
+import 'common/app_shared_preference.dart';
+import 'common/app_theme_provider.dart';
 
 class App extends ConsumerStatefulWidget {
   const App({
@@ -22,25 +24,29 @@ class _AppState extends ConsumerState<App> {
   @override
   void initState() {
     super.initState();
+    init();
+  }
+
+  Future<void> init() async {
+    await AppSharedPreferences.init();
   }
 
   @override
   Widget build(BuildContext context) {
+    final isDarkTheme = ref.watch(appThemeNotifierProvider);
     return Builder(
       builder: (context) {
-        return MaterialApp(
+        return MaterialApp.router(
           // debugShowCheckedModeBanner: false,
-          theme: Themes.appTheme(),
           localizationsDelegates: AppLocalizations.localizationsDelegates,
           supportedLocales: AppLocalizations.supportedLocales,
+          theme: Themes.appTheme(Brightness.light),
+          darkTheme: Themes.appTheme(Brightness.dark),
+          themeMode: isDarkTheme ? ThemeMode.dark : ThemeMode.light,
           title: 'MonstarLab Riverpod Template',
-          home: _buildContent(),
+          routerConfig: ref.read(goRouterProvider),
         );
       },
     );
-  }
-
-  Widget _buildContent() {
-    return const HomePage();
   }
 }

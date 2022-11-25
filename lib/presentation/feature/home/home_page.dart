@@ -3,7 +3,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../../constants/resources/colors.dart';
 import '../../common_widgets/base/base_page.dart';
-import '../news/news_page.dart';
+import '../news/top_anime_page.dart';
 import '../profile/profile_page.dart';
 import 'widgets/home_app_bar.dart';
 
@@ -17,7 +17,7 @@ class HomePage extends BasePage {
 class _HomePageState extends BasePageState<HomePage>
     with WidgetsBindingObserver {
   int _currentIndex = 0;
-  final List _screens = [const NewsPage(), const ProfilePage()];
+  final List _screens = [const TopAnimePage(), const ProfilePage()];
 
   void _updateIndex(int value) {
     setState(() {
@@ -38,14 +38,14 @@ class _HomePageState extends BasePageState<HomePage>
         type: BottomNavigationBarType.fixed,
         currentIndex: _currentIndex,
         onTap: _updateIndex,
-        selectedItemColor: AppColors.light.mediumBlue,
+        selectedItemColor: context.colors.mediumBlue,
         selectedFontSize: 13,
         unselectedFontSize: 13,
         iconSize: 30,
         items: [
           BottomNavigationBarItem(
-            label: AppLocalizations.of(context)!.home_tab_news,
-            icon: const Icon(Icons.newspaper),
+            label: 'Top Anime',
+            icon: Icon(Icons.newspaper),
           ),
           BottomNavigationBarItem(
             label: AppLocalizations.of(context)!.home_tab_profile,
