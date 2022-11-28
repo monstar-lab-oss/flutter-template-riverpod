@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../../constants/resources/colors.dart';
 import '../../common_widgets/base/base_page.dart';
@@ -41,14 +42,14 @@ class _HomePageState extends BasePageState<HomePage>
         selectedFontSize: 13,
         unselectedFontSize: 13,
         iconSize: 30,
-        items: const [
+        items: [
           BottomNavigationBarItem(
-            label: 'Top Anime',
-            icon: Icon(Icons.newspaper),
+            label: AppLocalizations.of(context)!.home_tab_top_anime,
+            icon: const Icon(Icons.newspaper),
           ),
           BottomNavigationBarItem(
-            label: 'Profile',
-            icon: Icon(Icons.person),
+            label: AppLocalizations.of(context)!.home_tab_profile,
+            icon: const Icon(Icons.person),
           ),
         ],
       ),

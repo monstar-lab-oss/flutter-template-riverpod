@@ -47,6 +47,7 @@ dev_dependencies:
   # Generate interface to APIs
   retrofit_generator: '>=4.0.0 <5.0.0'
   # Generate providers for Riverpod
+  intl: ^0.17.0 
   riverpod_generator: ^1.0.6
 
 flutter:
@@ -60,8 +61,6 @@ flutter:
     - assets/images/loading.gif
     - assets/icons/
 
-flutter_intl:
-  enabled: true
 
 flutter_gen:
   output: lib/generated
