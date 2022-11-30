@@ -21,7 +21,7 @@ dependencies:
   # Most popular Http Client
   dio: ^4.0.6
   #Declarative Routing Package
-  go_router: ^5.1.5
+  go_router: ^5.2.0
   # Code generation for immutable classes
   freezed: ^2.2.1
   freezed_annotation: ^2.2.0
@@ -41,13 +41,14 @@ dev_dependencies:
   # Official linter
   flutter_lints: ^2.0.1
   # Essential for file generation at build time
-  build_runner: ^2.3.2
+  build_runner: any
   # Safely use assets, fonts etc without string paths
   flutter_gen_runner: ^5.1.0+1
   # Generate interface to APIs
   retrofit_generator: '>=4.0.0 <5.0.0'
   # Generate providers for Riverpod
   riverpod_generator: ^1.0.6
+  mockito: ^5.3.2
 
 flutter:
   uses-material-design: true

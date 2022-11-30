@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import '../../../../constants/resources/colors.dart';
 import '../../../../constants/resources/images.dart';
 import '../../../../constants/routes.dart';
+import '../../../common_widgets/space_box.dart';
 import '../models/top_anime_item_model.dart';
 
 class TopAnimeItemWidget extends ConsumerWidget {
@@ -34,8 +35,16 @@ class TopAnimeItemWidget extends ConsumerWidget {
           clipBehavior: Clip.antiAlias,
           child: GridTileBar(
             backgroundColor: AppColors.light.mediumBlack,
-            title: _GridTitleText(animeNewsItemModel.titleEn),
-            subtitle: _GridTitleText(animeNewsItemModel.titleJp),
+            title: _GridTitleText(
+              animeNewsItemModel.titleEn,
+              TopAnimeItemTextType.title,
+              animeNewsItemModel.id,
+            ),
+            subtitle: _GridTitleText(
+              animeNewsItemModel.titleJp,
+              TopAnimeItemTextType.subtitle,
+              animeNewsItemModel.id,
+            ),
           ),
         ),
         child: Material(
@@ -44,10 +53,12 @@ class TopAnimeItemWidget extends ConsumerWidget {
             borderRadius: BorderRadius.circular(4),
           ),
           clipBehavior: Clip.antiAlias,
-          child: FadeInImage.assetNetwork(
-            placeholder: AppImages.loading,
-            image: animeNewsItemModel.imageUrl,
-          ),
+          child: animeNewsItemModel.imageUrl.isNotEmpty
+              ? FadeInImage.assetNetwork(
+                  placeholder: AppImages.loading,
+                  image: animeNewsItemModel.imageUrl,
+                )
+              : const SpaceBox(),
         ),
       ),
     );
@@ -56,16 +67,21 @@ class TopAnimeItemWidget extends ConsumerWidget {
 
 /// Allow the text size to shrink to fit in the space
 class _GridTitleText extends StatelessWidget {
-  const _GridTitleText(this.text);
+  const _GridTitleText(this.text, this.type, this.id);
 
   final String text;
+  final TopAnimeItemTextType type;
+  final int id;
 
   @override
   Widget build(BuildContext context) {
     return FittedBox(
       fit: BoxFit.scaleDown,
       alignment: AlignmentDirectional.centerStart,
+      key: ValueKey('GridTitleText_$id${type.name}'),
       child: Text(' $text'),
     );
   }
 }
+
+enum TopAnimeItemTextType { title, subtitle }
