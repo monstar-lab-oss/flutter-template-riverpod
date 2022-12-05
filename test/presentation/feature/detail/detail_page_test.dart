@@ -10,7 +10,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 
-import '../../../data/use_case/anime/get_top_anime_test.mocks.dart';
+import 'detail_page_test.mocks.dart';
 
 Finder _gridItemText(int id) =>
     find.byKey(ValueKey('GridTitleText_${id}title'));
