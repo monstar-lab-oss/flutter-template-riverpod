@@ -52,7 +52,7 @@ void main() {
   test('If Response Data is not null, model list should not be empty',
       () async {
     //Precondition
-        when(
+    when(
       _mockMyAnimeListRepository.getTopAnime(
         apiClient: anyNamed('apiClient'),
         getTopAnimeRequest: anyNamed('getTopAnimeRequest'),
