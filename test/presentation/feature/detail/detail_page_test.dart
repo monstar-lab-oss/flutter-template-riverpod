@@ -10,7 +10,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 
-import 'detail_page_test.mocks.dart';
+import '../../../data/use_case/anime/get_top_anime_test.mocks.dart';
 
 Finder _gridItemText(int id) =>
     find.byKey(ValueKey('GridTitleText_${id}title'));
@@ -45,22 +45,24 @@ void main() {
         apiClient: anyNamed('apiClient'),
         getTopAnimeRequest: anyNamed('getTopAnimeRequest'),
       ),
-    ).thenAnswer((_) async => const GetTopAnimeResponse(
-          data: [
-            GetTopAnimeResponseData(
-              malId: 1,
-              titleEnglish: 'Anime1',
-              titleJapanese: 'アニメ1',
-              images: null,
-            ),
-            GetTopAnimeResponseData(
-              malId: 2,
-              titleEnglish: 'Anime2',
-              titleJapanese: 'アニメ2',
-              images: null,
-            ),
-          ],
-        ));
+    ).thenAnswer(
+      (_) async => const GetTopAnimeResponse(
+        data: [
+          GetTopAnimeResponseData(
+            malId: 1,
+            titleEnglish: 'Anime1',
+            titleJapanese: 'アニメ1',
+            images: null,
+          ),
+          GetTopAnimeResponseData(
+            malId: 2,
+            titleEnglish: 'Anime2',
+            titleJapanese: 'アニメ2',
+            images: null,
+          ),
+        ],
+      ),
+    );
 
     await _loadTopAnimePage(tester);
 
