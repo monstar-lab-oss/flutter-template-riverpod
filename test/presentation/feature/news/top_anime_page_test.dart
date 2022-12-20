@@ -12,7 +12,7 @@ import 'package:mockito/mockito.dart';
 
 import 'top_anime_page_test.mocks.dart';
 
-Finder _gridItemText(int id) =>
+Finder _findGridItemText(int id) =>
     find.byKey(ValueKey('GridTitleText_${id}title'));
 
 final _mockMyAnimeListRepository = MockMyAnimeListRepository();
@@ -71,8 +71,8 @@ void main() {
     // Find by text
     expect(find.text(' Anime1'), findsOneWidget);
     // Find by key
-    expect(_gridItemText(1), findsOneWidget);
-    expect(_gridItemText(2), findsOneWidget);
+    expect(_findGridItemText(1), findsOneWidget);
+    expect(_findGridItemText(2), findsOneWidget);
     //Two widgets are found
     final list = tester.widgetList(find.byType(TopAnimeItemWidget));
     expect(list.length, 2);
