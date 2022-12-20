@@ -39,15 +39,49 @@ Launch Configurations are included in the `.run` folder.
 - Follow .vscode/launch.json
 
 ### run iOS/Android From terminal
+
 ```
 - flutter run --flavor Development -t lib/main/main_development.dart
 ```
 
 ### run iOS using xcode
+
 - Select Development schema from top center and run in development mode(Debug)
 - Should select Production for archive release mode ipa file
 
-### Localization
+## Sample Tests
+
+### How to Run
+
+`flutter test`
+
+### Sample Unit Tests
+
+Location : `test/data/use_case/anime/get_top_anime_test.dart`
+
+#### "If Response Data is Null, model list should be empty"
+
+Repository is mocked with `Mockito` to simulate a blank (null) response from the API. Test verifies
+that the factory will handle this case gracefully, and correctly produce a blank list of
+ui `TopAnimeItemModel` objects.
+
+#### "If Response Data is not null, model list should not be empty"
+
+Repository is mocked with `Mockito` to simulate a response from the API containing 2 Top Anime
+items. Test verifies that the factory will produce a list containing 2 ui `TopAnimeItemModel`
+objects with the correct data.
+
+### Sample UI Tests
+
+Location : `test/presentation/feature/news/top_anime_page_test.dart`
+
+#### Should display 2 Top Anime Widgets
+
+Repository is mocked with `Mockito` to simulate a response from the API containing 2 Top Anime
+items. Test verifies that the UI displays 2 `TopAnimeItemWidget` which contain the contents of the
+API data.
+
+## Localization
 - ref https://docs.flutter.dev/development/accessibility-and-localization/internationalization
 - define localization string file in app_en.arb, app_ja.arb it will be automatically generated to use.
 - use example - AppLocalizations.of(context)!.home_tab_profile
