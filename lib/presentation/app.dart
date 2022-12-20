@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../constants/resources/themes.dart';
@@ -37,11 +38,11 @@ class _AppState extends ConsumerState<App> {
       builder: (context) {
         return MaterialApp.router(
           // debugShowCheckedModeBanner: false,
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          supportedLocales: AppLocalizations.supportedLocales,
           theme: Themes.appTheme(Brightness.light),
           darkTheme: Themes.appTheme(Brightness.dark),
           themeMode: isDarkTheme ? ThemeMode.dark : ThemeMode.light,
-          // localizationsDelegates: AppLocalizations.localizationsDelegates,
-          // supportedLocales: AppLocalizations.supportedLocales,
           title: 'MonstarLab Riverpod Template',
           routerConfig: ref.read(goRouterProvider),
         );
