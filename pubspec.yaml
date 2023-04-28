@@ -36,6 +36,7 @@ dependencies:
   logger: ^1.1.0
   camera: ^0.10.4
   video_player: ^2.6.1
+  http:
 
 dev_dependencies:
   flutter_test:
