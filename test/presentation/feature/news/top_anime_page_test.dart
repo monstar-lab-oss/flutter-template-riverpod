@@ -4,8 +4,8 @@ import 'package:flutter_template_riverpod/data/api/api_client.dart';
 import 'package:flutter_template_riverpod/data/model/api/response/get_top_anime_response.dart';
 import 'package:flutter_template_riverpod/data/providers/my_anime_list_repository_provider.dart';
 import 'package:flutter_template_riverpod/data/repository/my_anime_list_repository.dart';
-import 'package:flutter_template_riverpod/presentation/feature/news/top_anime_page.dart';
-import 'package:flutter_template_riverpod/presentation/feature/news/widgets/top_anime_item_widget.dart';
+import 'package:flutter_template_riverpod/presentation/feature/record_lecture/record_lecture_page.dart';
+import 'package:flutter_template_riverpod/presentation/feature/record_lecture/widgets/top_anime_item_widget.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
@@ -25,7 +25,7 @@ Future<void> _loadTopAnimePage(WidgetTester tester) async {
             .overrideWithValue(_mockMyAnimeListRepository)
       ],
       child: const MaterialApp(
-        home: TopAnimePage(),
+        home: RecordLecturePage(),
       ),
     ),
   );

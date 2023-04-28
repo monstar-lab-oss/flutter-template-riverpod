@@ -1,6 +1,6 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-import '../../../presentation/feature/news/models/top_anime_item_model.dart';
+import '../../../presentation/feature/record_lecture/models/top_anime_item_model.dart';
 import '../../api/api_client.dart';
 import '../../model/api/request/get_top_anime_request.dart';
 import '../../repository/my_anime_list_repository.dart';
