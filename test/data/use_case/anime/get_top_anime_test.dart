@@ -4,7 +4,7 @@ import 'package:flutter_template_riverpod/data/model/api/request/get_top_anime_r
 import 'package:flutter_template_riverpod/data/model/api/response/get_top_anime_response.dart';
 import 'package:flutter_template_riverpod/data/repository/my_anime_list_repository.dart';
 import 'package:flutter_template_riverpod/data/use_case/anime/get_top_anime.dart';
-import 'package:flutter_template_riverpod/presentation/feature/news/models/top_anime_item_model.dart';
+import 'package:flutter_template_riverpod/presentation/feature/record_lecture/models/top_anime_item_model.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
