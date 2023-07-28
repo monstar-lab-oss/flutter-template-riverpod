@@ -7,14 +7,14 @@ import '../news/top_anime_page.dart';
 import '../profile/profile_page.dart';
 import 'widgets/home_app_bar.dart';
 
-class HomePage extends BasePage {
-  const HomePage({Key? key}) : super(key: key);
+class HomeScreen extends BasePage {
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
-  BasePageState<HomePage> createState() => _HomePageState();
+  BasePageState<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomePageState extends BasePageState<HomePage>
+class _HomeScreenState extends BasePageState<HomeScreen>
     with WidgetsBindingObserver {
   int _currentIndex = 0;
   final List _screens = [const TopAnimePage(), const ProfilePage()];
