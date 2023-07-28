@@ -2,7 +2,7 @@ import 'package:go_router/go_router.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../constants/routes.dart';
-import '../../presentation/feature/detail/detail_page.dart';
+import '../../presentation/feature/detail/detail_screen.dart';
 import '../../presentation/feature/home/home_screen.dart';
 
 part 'router_provider.g.dart';
@@ -20,7 +20,7 @@ GoRouter goRouter(ref) => GoRouter(
               name: RouteNames.animeDetail,
               path: RoutePaths.animeDetail,
               builder: (context, state) {
-                return DetailPage(
+                return DetailScreen(
                   id: int.parse(state.params[RouteParams.animeDetailId]!),
                 );
               },
