@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../../constants/resources/colors.dart';
-import '../../common_widgets/base/base_page.dart';
+import '../../common_widgets/base/base_screen.dart';
 import '../news/top_anime_page.dart';
 import '../profile/profile_page.dart';
 import 'widgets/home_app_bar.dart';
 
-class HomeScreen extends BasePage {
+class HomeScreen extends BaseScreen {
   const HomeScreen({Key? key}) : super(key: key);
 
   @override
-  BasePageState<HomeScreen> createState() => _HomeScreenState();
+  BaseScreenState<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends BasePageState<HomeScreen>
+class _HomeScreenState extends BaseScreenState<HomeScreen>
     with WidgetsBindingObserver {
   int _currentIndex = 0;
   final List _screens = [const TopAnimePage(), const ProfilePage()];
