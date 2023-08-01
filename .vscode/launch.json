@@ -11,6 +11,8 @@
             "program": "lib/main/main_development.dart",
             "flutterMode": "debug",
             "args": [
+                "--flavor",
+                "development",
                 "--debug"
             ]
         },
@@ -21,6 +23,8 @@
             "program": "lib/main/main_development.dart",
             "flutterMode": "release",
             "args": [
+                "--flavor",
+                "development",
                 "--release"
             ]
         },
@@ -31,6 +35,8 @@
             "program": "lib/main/main_production.dart",
             "flutterMode": "debug",
             "args": [
+                "--flavor",
+                "production",
                 "--debug"
             ]
         },
@@ -41,6 +47,8 @@
             "program": "lib/main/main_production.dart",
             "flutterMode": "release",
             "args": [
+                "--flavor",
+                "production",
                 "--release"
             ]
         }
