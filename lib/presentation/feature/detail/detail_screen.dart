@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 
-import '../../common_widgets/base/base_page_stateless.dart';
+import '../../common_widgets/base/base_screen_stateless.dart';
 import 'widgets/detail_app_bar.dart';
 
-class DetailPage extends BasePageStateless {
-  const DetailPage({required this.id, Key? key}) : super(key: key);
+class DetailScreen extends BaseScreenStateless {
+  const DetailScreen({required this.id, Key? key}) : super(key: key);
   final int id;
 
   @override

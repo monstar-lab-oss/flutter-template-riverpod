@@ -2,8 +2,8 @@ import 'package:go_router/go_router.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../constants/routes.dart';
-import '../../presentation/feature/detail/detail_page.dart';
-import '../../presentation/feature/home/home_page.dart';
+import '../../presentation/feature/detail/detail_screen.dart';
+import '../../presentation/feature/home/home_screen.dart';
 
 part 'router_provider.g.dart';
 
@@ -13,16 +13,17 @@ GoRouter goRouter(ref) => GoRouter(
         GoRoute(
           path: RoutePaths.root,
           builder: (context, state) {
-            return const HomePage();
+            return const HomeScreen();
           },
           routes: [
             GoRoute(
               name: RouteNames.animeDetail,
               path: RoutePaths.animeDetail,
               builder: (context, state) {
-                return DetailPage(
+                return DetailScreen(
                   id: int.parse(
-                      state.pathParameters[RouteParams.animeDetailId]!),
+                    state.pathParameters[RouteParams.animeDetailId]!,
+                  ),
                 );
               },
             ),

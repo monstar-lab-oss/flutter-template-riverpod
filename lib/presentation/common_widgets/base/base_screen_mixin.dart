@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../../../constants/resources/colors.dart';
 
-mixin BasePageMixin {
+mixin BaseScreenMixin {
   bool get resizeToAvoidBottomInset => false;
 
   bool get tapOutsideHideKeyboard => false;
