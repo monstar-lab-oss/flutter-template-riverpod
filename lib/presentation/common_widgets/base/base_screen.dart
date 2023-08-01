@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:logger/logger.dart';
 
-import 'base_page_mixin.dart';
+import 'base_screen_mixin.dart';
 
-abstract class BasePage extends ConsumerStatefulWidget {
-  const BasePage({Key? key}) : super(key: key);
+abstract class BaseScreen extends ConsumerStatefulWidget {
+  const BaseScreen({Key? key}) : super(key: key);
 }
 
-abstract class BasePageState<Page extends BasePage> extends ConsumerState<Page>
-    with BasePageMixin {
+abstract class BaseScreenState<Page extends BaseScreen> extends ConsumerState<Page>
+    with BaseScreenMixin {
   final logger = Logger();
 
   @override
