@@ -17,15 +17,13 @@ dependencies:
   # Superior state management
   flutter_riverpod: ^2.1.1
   riverpod_annotation: ^1.0.6
+  freezed_annotation: ^2.2.0
   # Handle the complexity of asynchronous networking calls to REST APIs
   retrofit: ^4.0.1
   # Most popular Http Client
   dio: ^5.3.2
   #Declarative Routing Package
   go_router: ^10.0.0
-  # Code generation for immutable classes
-  freezed: ^2.2.1
-  freezed_annotation: ^2.2.0
   # Generate code for converting to and from JSON via annotation
   json_serializable: ^6.7.1
   json_annotation: ^4.8.1
@@ -39,10 +37,11 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  # Essential for file generation at build time
+  freezed:
+  build_runner:
   # Official linter
   flutter_lints: ^2.0.2
-  # Essential for file generation at build time
-  build_runner: any
   # Safely use assets, fonts etc without string paths
   flutter_gen_runner: ^5.3.1
   # Generate interface to APIs
