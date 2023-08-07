@@ -9,7 +9,7 @@ import 'app_flavor.dart';
 
 void mainCommon(AppFlavor appFlavor) {
   debugPrint('Launching Mode : ${appFlavor.appFlavorType}.');
-  WidgetsFlutterBinding.ensureInitialized();
+
   Future<void> startApp() async {
     runApp(
       ProviderScope(
@@ -25,6 +25,7 @@ void mainCommon(AppFlavor appFlavor) {
 
   runZonedGuarded(
     () {
+      WidgetsFlutterBinding.ensureInitialized();
       startApp();
     },
     (error, stackTrace) {
