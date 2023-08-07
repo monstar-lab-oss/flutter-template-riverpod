@@ -20,7 +20,7 @@ class TopAnimeItemWidget extends ConsumerWidget {
     return GestureDetector(
       onTap: () => context.pushNamed(
         RouteNames.animeDetail,
-        params: {
+        pathParameters: {
           RouteParams.animeDetailId: animeNewsItemModel.id.toString(),
         },
       ),
