@@ -8,7 +8,7 @@ import '../../../data/use_case/anime/get_top_anime.dart';
 import 'widgets/top_anime_item_widget.dart';
 
 class TopAnimePage extends ConsumerWidget {
-  const TopAnimePage({Key? key}) : super(key: key);
+  const TopAnimePage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -43,7 +43,7 @@ class TopAnimePage extends ConsumerWidget {
                 childAspectRatio: 1,
                 children: [
                   for (final anime in topAnime)
-                    TopAnimeItemWidget(animeNewsItemModel: anime)
+                    TopAnimeItemWidget(animeNewsItemModel: anime),
                 ],
               ),
             );

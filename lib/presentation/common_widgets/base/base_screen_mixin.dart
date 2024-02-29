@@ -1,5 +1,3 @@
-import 'dart:io' show Platform;
-
 import 'package:flutter/material.dart';
 
 import '../../../constants/resources/colors.dart';
@@ -9,9 +7,11 @@ mixin BaseScreenMixin {
 
   bool get tapOutsideHideKeyboard => false;
 
+  bool get canPop => true;
+
   Color? get backgroundColor => null;
 
-  Future<bool> onWillPop() async => true;
+  Function(bool)? get onPopInvoked => null;
 
   Widget buildBody(BuildContext context);
 
@@ -32,8 +32,9 @@ mixin BaseScreenMixin {
       backgroundColor: context.colors.white,
       resizeToAvoidBottomInset: resizeToAvoidBottomInset,
       appBar: buildAppBar(context),
-      body: WillPopScope(
-        onWillPop: Platform.isIOS ? null : onWillPop,
+      body: PopScope(
+        canPop: canPop,
+        onPopInvoked: onPopInvoked,
         child: GestureDetector(
           onTap: () {
             if (tapOutsideHideKeyboard) {

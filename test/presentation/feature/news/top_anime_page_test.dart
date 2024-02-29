@@ -22,7 +22,7 @@ Future<void> _loadTopAnimePage(WidgetTester tester) async {
     ProviderScope(
       overrides: [
         myAnimeListRepositoryProvider
-            .overrideWithValue(_mockMyAnimeListRepository)
+            .overrideWithValue(_mockMyAnimeListRepository),
       ],
       child: const MaterialApp(
         home: TopAnimePage(),

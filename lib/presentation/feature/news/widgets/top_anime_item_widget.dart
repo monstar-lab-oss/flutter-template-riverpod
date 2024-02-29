@@ -11,8 +11,8 @@ import '../models/top_anime_item_model.dart';
 class TopAnimeItemWidget extends ConsumerWidget {
   const TopAnimeItemWidget({
     required this.animeNewsItemModel,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
   final TopAnimeItemModel animeNewsItemModel;
 
   @override

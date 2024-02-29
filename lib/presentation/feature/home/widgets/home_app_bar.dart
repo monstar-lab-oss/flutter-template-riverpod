@@ -7,8 +7,8 @@ const double leadingWidth = 100;
 
 class HomeAppBar extends ConsumerWidget implements PreferredSizeWidget {
   const HomeAppBar({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

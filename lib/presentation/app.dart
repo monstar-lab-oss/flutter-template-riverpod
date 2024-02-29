@@ -11,8 +11,8 @@ import 'common/app_theme_provider.dart';
 class App extends ConsumerStatefulWidget {
   const App({
     required this.appFlavor,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   final AppFlavor appFlavor;
 
