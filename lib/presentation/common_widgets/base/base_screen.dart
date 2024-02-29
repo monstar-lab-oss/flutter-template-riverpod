@@ -5,7 +5,7 @@ import 'package:logger/logger.dart';
 import 'base_screen_mixin.dart';
 
 abstract class BaseScreen extends ConsumerStatefulWidget {
-  const BaseScreen({Key? key}) : super(key: key);
+  const BaseScreen({super.key});
 }
 
 abstract class BaseScreenState<Page extends BaseScreen> extends ConsumerState<Page>

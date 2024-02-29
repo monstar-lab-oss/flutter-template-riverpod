@@ -8,8 +8,8 @@ const double leadingWidth = 100;
 
 class DetailAppBar extends ConsumerWidget implements PreferredSizeWidget {
   const DetailAppBar({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

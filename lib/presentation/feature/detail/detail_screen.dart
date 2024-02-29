@@ -4,7 +4,7 @@ import '../../common_widgets/base/base_screen_stateless.dart';
 import 'widgets/detail_app_bar.dart';
 
 class DetailScreen extends BaseScreenStateless {
-  const DetailScreen({required this.id, Key? key}) : super(key: key);
+  const DetailScreen({required this.id, super.key});
   final int id;
 
   @override

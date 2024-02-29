@@ -30,7 +30,7 @@ android {
     ndkVersion flutter.ndkVersion
 
     defaultConfig {
-        minSdkVersion 18
+        minSdkVersion flutter.minSdkVersion
     }
 
     compileOptions {

@@ -8,7 +8,7 @@ import '../profile/profile_page.dart';
 import 'widgets/home_app_bar.dart';
 
 class HomeScreen extends BaseScreen {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   BaseScreenState<HomeScreen> createState() => _HomeScreenState();
